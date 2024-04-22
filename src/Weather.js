@@ -1,4 +1,4 @@
-// import React from "react"
+import React from "react"
 import axios from "axios"
 import {Rings} from "react-loader-spinner"
 export default function Weather(props){
