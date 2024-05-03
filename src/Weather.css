@@ -1,0 +1,31 @@
+    .main {
+        width: 510px;
+        height: 50%;
+        display: block;
+        margin: auto;
+        margin-top: 50px;
+        border-color: black;
+        border-width: 1px;
+        border-style: inset;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        align-items: center;
+    }
+    h6 {
+        font-weight: normal;
+    }
+    .temp-data{
+        display: inline;
+    }
+    .tempratue {
+        font-size: 40px;
+        font-weight: normal;
+    }
+    .celcious{
+        position: relative;
+        top: 0%;
+        right: 0%;
+        bottom: 20px;
+        font-size: 15px;
+    }
