@@ -99,7 +99,7 @@ export default function Weather(props) {
                 }
 
             </div><div className="container text-center " id="links">
-                <a href="https://github.com/Emnet-tes/challenge " rel="noreferrer" target="_blank">open sourced  </a>by Emnet
+                <a href="https://github.com/Emnet-tes/weather-app" rel="noreferrer" target="_blank">open sourced  </a>by Emnet
             </div>
         </>)
 }
