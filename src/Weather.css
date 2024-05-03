@@ -1,4 +1,6 @@
+
     .main {
+        background-color: #282c34;
         width: 510px;
         height: 50%;
         display: block;
@@ -8,9 +10,9 @@
         border-width: 1px;
         border-style: inset;
         border-radius: 10px;
-        background-color: white;
         position: relative;
         align-items: center;
+        color: white;
     }
     h6 {
         font-weight: normal;

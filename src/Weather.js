@@ -49,7 +49,7 @@ export default function Weather(props) {
 
 
     return (
-        <>
+        <div className="body">
 
             <div className="main p-3">
                 <form className="row g-3" onSubmit={handleSubmit}>
@@ -101,5 +101,5 @@ export default function Weather(props) {
             </div><div className="container text-center " id="links">
                 <a href="https://github.com/Emnet-tes/weather-app" rel="noreferrer" target="_blank">open sourced  </a>by Emnet
             </div>
-        </>)
+        </div>)
 }
