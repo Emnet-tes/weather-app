@@ -1,10 +1,11 @@
 import React ,{useState}from "react";
+import "./Weather.css";
 
 
 export default function WeatherTemperature(props)
 {
-    const [unit,Setunit] = useState("celcius");
-
+    let [unit,Setunit] = useState(props.metric);
+    
     function Changemetrics(event)
     {
         event.preventDefault();
@@ -17,15 +18,18 @@ export default function WeatherTemperature(props)
     }
     
     function tofharniet(){
+        
         return Math.round((props.celsius * 9 / 5) + 32);
     }
+    
         
         if (unit === "celcius"){
             return(
                 <div className="tempData">
-            <span className="tempratue">{tofharniet()}</span>
+            <span className="tempratue">{Math.round(props.celsius)}</span>
             <span className="celcious">°C {" | "} 
-                    <a href="/" onClick={Changemetrics}>°F</a>
+            <a href="/" onClick={Changemetrics}>°F</a>
+                    
             </span></div>
             )
             
@@ -33,13 +37,14 @@ export default function WeatherTemperature(props)
         else{
             return(
                 <div className="tempData">
-                    <span className="tempratue">{Math.round(props.celsius)}</span>
-                    <span className="celcious"><a href="/" onClick={Changemetrics}>°C</a> {" | "}°F
+                    <span className="tempratue">{tofharniet()}</span>
+                    <span className="celcious">
+                    <a href="/" onClick={Changemetrics}>°C</a> 
+                    {" | "}°F
                         
                     </span></div>
             );
                 
         }
         
-      
 }
