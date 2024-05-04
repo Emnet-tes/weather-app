@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import axios from "axios"
 // import {Blocks} from "react-loader-spinner"
+import WeatherTemperature from "./WeatherTemprature";
 import './Weather.css';
 
 export default function Weather(props) {
@@ -31,6 +32,7 @@ export default function Weather(props) {
 
         const unixTime = dtIn + timezoneIn;
         const dateObj = new Date(unixTime * 1000);
+        console.log(dateObj)
         const dayOfWeek = dateObj.toLocaleString('en', { weekday: 'long' });
         const time = dateObj.toLocaleString('en', { hour: 'numeric', minute: 'numeric', hour12: true });
 
@@ -75,9 +77,7 @@ export default function Weather(props) {
                             <div className="col-6">
 
                                 <img src="http://openweathermap.org/img/wn/04n@2x.png" alt={weatherData.weather[0].description}></img>
-                                <div className="tempData"><span className="tempratue">{weatherData.main.temp}</span><span className="celcious">
-                                    °C
-                                </span></div>
+                                <WeatherTemperature celsius={weatherData.main.temp} />
 
                             </div>
 
