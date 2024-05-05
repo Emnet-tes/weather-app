@@ -14,7 +14,7 @@ export default function ForecastDay(props)
     }
     return(
         <>
-            <div className="daily">
+            <div className="daily ms-2">
                 {day()}
             </div>
             <div className="Icons img-fluid">
