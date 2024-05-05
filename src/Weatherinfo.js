@@ -1,6 +1,7 @@
 import React from "react";
 import Formateddate from "./Formateddate";
 import WeatherTemperature from "./WeatherTemprature";
+
 export default function Weatherinfo(props) {
     return (
 
@@ -14,9 +15,9 @@ export default function Weatherinfo(props) {
 
             <div className="row align-items-start">
 
-                <div className="col-6">
+                <div className="col-6 img-fluid">
 
-                    <img src="http://openweathermap.org/img/wn/04n@2x.png" alt={props.data.description}></img>
+                    <img  src="http://openweathermap.org/img/wn/04n@2x.png" alt={props.data.description}></img>
                     <WeatherTemperature celsius={props.data.temperature} metric="celcius"  />
 
                 </div>
@@ -27,9 +28,7 @@ export default function Weatherinfo(props) {
                     < h6 >wind : {props.data.wind}Km/h</h6>
 
                 </div>
-
             </div>
-
         </div>
     )
 }

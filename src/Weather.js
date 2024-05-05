@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import axios from "axios"
-
 import './Weather.css';
 import Weatherinfo from "./Weatherinfo";
-
+import WeatherForecast from "./WeatherForecast";
 export default function Weather(props) {
     let [weatherData, SetweatherData] = useState({ ready: false });
     let [city, Setcity] = useState(props.defaultcity);
@@ -11,6 +10,7 @@ export default function Weather(props) {
     function handleResponse(response) {
         SetweatherData({
             ready: true,
+            coord:response.data.coord,
             temperature: response.data.main.temp,
             humidity: response.data.main.humidity,
             date: new Date(response.data.dt * 1000),
@@ -55,6 +55,7 @@ export default function Weather(props) {
                        
                     </form>
                     <Weatherinfo data={weatherData} />
+                    <WeatherForecast coord={weatherData.coord} />
                 </div><div className="container text-center " id="links">
                     This project was coded by Emnet and is open-sourced on <a href="https://github.com/Emnet-tes/weather-app" rel="noreferrer" target="_blank">GitHub</a> and hosted on <a href="https://weather-app-grvj.onrender.com"  rel="noreferrer" target="_blank">Render</a> .
                 </div>
