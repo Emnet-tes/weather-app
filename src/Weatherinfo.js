@@ -1,13 +1,15 @@
 import React from "react";
 import Formateddate from "./Formateddate";
 import WeatherTemperature from "./WeatherTemprature";
+import "./Weather.css";
+
 
 export default function Weatherinfo(props) {
     return (
 
         <div className="container mt-2 ">
 
-            <div className="row align-items-start ">
+            <div className="row align-items-start info">
                 <h5>{props.data.city}</h5>
                 <h6> <Formateddate utc={props.data.date}  /></h6>
                 <h6>{props.data.description}</h6>
